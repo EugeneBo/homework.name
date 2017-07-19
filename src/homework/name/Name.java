@@ -12,43 +12,29 @@ public class Name {
 
         String fullName = sc.nextLine();
 
+
+        System.out.print("Name: ");
+
         int count = 0;
-        int count2 = 0;
 
         for (int i = 0; i <= fullName.length() - 1; i++) {
-            if (fullName.charAt(i) == ' ') {
-                count = i;
-                break;
+
+            if (fullName.charAt(i) != ' ') {
+                System.out.print(fullName.charAt(i));
+
+
+            } else {
+                count++;
+                if (count == 1) {
+                    System.out.print("\nSurname: ");
+                } else {
+                    System.out.print("\nSecond name: ");
+                }
+
             }
+
+
         }
-
-        for (int k = count + 1; k <= fullName.length() - 1; k++) {
-            if (fullName.charAt(k) == ' ') {
-                count2 = k;
-                break;
-
-            }
-        }
-
-
-        System.out.print("\nSurname: ");
-        for (int i = 0; i <= count; i++) {
-
-            System.out.print(fullName.charAt(i));
-        }
-
-        System.out.print("\nName: ");
-        for (int i = count + 1; i <= count2; i++) {
-            System.out.print(fullName.charAt(i));
-        }
-
-
-        System.out.print("\nMiddle name: ");
-        for (int i = count2 + 1; i <= fullName.length() - 1; i++) {
-            System.out.print(fullName.charAt(i));
-        }
-
-
 
     }
 
